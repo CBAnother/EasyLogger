@@ -14,8 +14,8 @@ call "./bat/create_dir.bat" export/x86/Debug
 call "./bat/create_dir.bat" export/x86/Release
 
 xcopy "..\..\..\easylogger\inc\" "export\inc\" /s /q /y
-call %root%/ymake_item.bat export/x86/Debug -m32 -O0 -g3 %utf8%
-call %root%/ymake_item.bat export/x64/Debug -m64 -O0 -g3 %utf8%
-call %root%/ymake_item.bat export/x86/Release -m32 -O3 -g0 %utf8%
-call %root%/ymake_item.bat export/x64/Release -m64 -O3 -g0 %utf8%
+call %root%/ymake_item.bat export/x86/Debug -m32 1 %utf8%
+call %root%/ymake_item.bat export/x64/Debug -m64 1 %utf8%
+call %root%/ymake_item.bat export/x86/Release -m32 0 %utf8%
+call %root%/ymake_item.bat export/x64/Release -m64 0 %utf8%
 pause
